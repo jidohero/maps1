@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
+  <link href='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.css' rel='stylesheet' />
+    <style>
+        .left {
+            position:absolute;
+            top:30px;
+            left:10px; /* Positions 50% from right (right edge will be at center) */
+            margin-right:100px; /* Positions 200px to the left of center */
+            }
+        .right {
+            position:absolute;
+            top:10px;
+            right:0px; /* Positions 50% from right (right edge will be at center) */
+            margin-right:100px; /* Positions 200px to the left of center */
+            }
+    </style>
+    
+</head>
+  <body>
+    <div class="left" id="map" style="width: 800px; height: 600px"></div>
+      <div class="right" id="map2" style="width: 600px; height: 400px"></div>
+      
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
+    <script>
+      var map = L.map('map').setView([35.8860717, 128.507701699], 7);
+ L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	maxZoom: 19,
+	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+     id: 'osm.streets'
+		}).addTo(map);
+        
+    L.marker([35.8860717, 128.507701699]).addTo(map)
+			.bindPopup("<b>Daegu DERP</b><br>35.8860717, 128.507701699")//.openPopup();
+    L.marker([36.955041, 127.046088]).addTo(map)
+			.bindPopup("<b>Beacon Hill (private)</b><br>36.955041, 127.046088")//.openPopup();
+    L.marker([36.010679,129.368427]).addTo(map)
+			.bindPopup("<b>Pohang Haedo Park</b><br>36.010679,129.368427")//.openPopup();
+    //L.marker([36.5, .09], {icon: greenIcon}).addTo(map);
+    
+    </script>
+      
+   
+  </body>
+</html>
