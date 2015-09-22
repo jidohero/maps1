@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
+  <link href='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.css' rel='stylesheet' />
+    <style>
+        .left {
+            position:absolute;
+            top:50px;
+            left:10px; /* Positions 50% from right (right edge will be at center) */
+            margin-right:100px; /* Positions 200px to the left of center */
+            }
+        .right {
+            position:absolute;
+            top:10px;
+            right:0px; /* Positions 50% from right (right edge will be at center) */
+            margin-right:100px; /* Positions 200px to the left of center */
+            }
+    </style>
+    
+</head>
+  <body>
+      <font size="6">Countries Where Refugees International Is Working</font><br><br>
+    <div class="left" id="map" style="width: 800px; height: 600px"></div>
+      <div class="right" id="map2" style="width: 600px; height: 400px"></div>
+      
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
+    <script>
+      var map = L.map('map').setView([0, 0], 2);
+    L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
+}).addTo(map);
+        
+    L.marker([12.3333, 1.6667]).addTo(map)
+			.bindPopup("<b>Burkina Fosa</b><br>In 2012, the Sahel experienced another major food crisis as a result of poor rainfall and high food prices. Close to 20 million people lacked enough food to feed their families and one million children were at risk of starvation. The crisis came on the heels of droughts in 2005 and 2010, which rendered households more vulnerable and left them with fewer coping mechanisms. Compounding the region’s problems, in January 2012, armed conflict broke out in Mali when Tuareg separatists and an Islamic militant group linked to Al Qaeda took control of large areas of northern Mali. As of early 2014, nearly 450,000 Malians were still displaced, with roughly 50,000 living as refugees in Burkina Faso.")//.openPopup();
+    L.marker([2.88, 23.65]).addTo(map)
+			.bindPopup("<b>Democratic Republic of the Congo</b><br>The Democratic Republic of the Congo faces ongoing conflict in the east. More than two million people have been internally displaced.")//.openPopup();
+    L.marker([1.2667, 36.80]).addTo(map)
+			.bindPopup("<b>Kenya</b><br><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Kenya.svg/1280px-Flag_of_Kenya.svg.png' height='55' width='105'><br>Under Kenyan law, refugees cannot naturalize and children of unknown origin who might otherwise be stateless, including some orphans and street children, are not automatically granted citizenship. Security concerns, as well as discrimination against groups with historical or ethnic ties to other countries, force minorities to endure arbitrary, biased scrutiny and unnecessary long delays in order to obtain citizenship.")//.openPopup();
+    L.marker([12.6500, 8.00]).addTo(map)
+			.bindPopup("<b>Mali</b><br>The eruption of violence in Mali has had significant humanitarian impacts. Civilians in the north have been subjected to widespread human rights abuses at the hands of the insurgents, including killings, targeted executions, mutilations, rape and other forms of violence against women, and recruitment of child soldiers. Furthermore, retribution attacks have been carried out by Malian soldiers and civilians against Tuaregs, Arabs, and light-skinned Malians who are perceived as associates of jihadist groups.")//.openPopup();
+    L.marker([13.5333, 2.08]).addTo(map)
+			.bindPopup("<b>Niger</b><br>In 2012, the Sahel experienced another major food crisis as a result of poor rainfall and high food prices. Close to 20 million people lacked enough food to feed their families and one million children were at risk of starvation. The crisis came on the heels of droughts in 2005 and 2010, which rendered households more vulnerable and left them with fewer coping mechanisms. Compounding the region’s problems, in January 2012, armed conflict broke out in Mali when Tuareg separatists and an Islamic militant group linked to Al Qaeda took control of large areas of northern Mali. As of early 2014, nearly 450,000 Malians were still displaced, with roughly 50,000 living as refugees in Niger.")//.openPopup();
+    L.marker([2.0333, 45.35]).addTo(map)
+			.bindPopup("<b>Somalia</b><br>Somalia has been engulfed in conflict since the Siade Barre regime collapsed in 1991, and many of its citizens have been displaced ever since.")//.openPopup();
+    L.marker([4.850, 31.60]).addTo(map)
+			.bindPopup("<b>South Sudan</b><br>International actors must work together to meet emergency needs and provide much needed food, medical, and humanitarian assistance.")//.openPopup();
+    
+    //L.marker([36.5, .09], {icon: greenIcon}).addTo(map);
+    
+    </script>
+      
+   
+  </body>
+</html>
