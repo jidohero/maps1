@@ -20,7 +20,6 @@
     
 </head>
   <body>
-      <br><br>hello
     <div class="left" id="map" style="width: 800px; height: 600px"></div>
       <div class="right" id="map2" style="width: 600px; height: 400px"></div>
       
@@ -33,14 +32,38 @@
      id: 'osm.streets'
 		}).addTo(map);
         
-    L.marker([35.8860717, 128.507701699]).addTo(map)
+    var discIcon = L.icon({
+    iconUrl: 'disc.png',
+        
+    iconSize:     [35, 35], // size of the icon
+    iconAnchor:   [22, 22], // point of the icon which will correspond to marker's location
+    popupAnchor:  [-3, -15] // point from which the popup should open relative to the iconAnchor
+});
+    //L.marker([51.5, -0.09], {icon: discIcon}).addTo(map);
+    L.marker([35.8860717, 128.507701699], {icon: discIcon}).addTo(map)
 			.bindPopup("<b>Daegu DERP</b><br>35.8860717, 128.507701699")//.openPopup();
-    L.marker([36.955041, 127.046088]).addTo(map)
+    L.marker([36.955041, 127.046088], {icon: discIcon}).addTo(map)
 			.bindPopup("<b>Beacon Hill (private)</b><br>36.955041, 127.046088")//.openPopup();
-    L.marker([36.010679,129.368427]).addTo(map)
+    L.marker([36.010679,129.368427], {icon: discIcon}).addTo(map)
 			.bindPopup("<b>Pohang Haedo Park</b><br>36.010679,129.368427")//.openPopup();
-    //L.marker([36.5, .09], {icon: greenIcon}).addTo(map);
-    
+    L.marker([37.880262, 127.6941810], {icon: discIcon}).addTo(map)
+			.bindPopup("<b>Jung Island</b><br>37.880262, 127.6941810")//.openPopup();
+    L.marker([37.928814, 127.075016], {icon: discIcon}).addTo(map)
+			.bindPopup("<b>Dragons Lair - Camp Casey</b><br>37.928814, 127.075016")//.openPopup();
+    L.marker([37.039466, 127.6536280], {icon: discIcon}).addTo(map)
+			.bindPopup("<b>Eumseong</b><br>37.039466, 127.6536280")//.openPopup();
+    L.marker([37.220205, 128.2807450], {icon: discIcon}).addTo(map)
+			.bindPopup("<b>Yeongwol</b><br>37.220205, 128.2807450")//.openPopup();
+    L.marker([35.859117, 129.215784], {icon: discIcon}).addTo(map)
+			.bindPopup("<b>Hwangseong Park - Gyeongju</b><br>35.859117, 129.215784")//.openPopup();
+    L.marker([33.408068, 126.395284], {icon: discIcon}).addTo(map)
+			.bindPopup("<b>Lets Run Park - Jeju</b><br>33.408068, 126.395284")//.openPopup();
+    L.marker([33.408068, 126.395284], {icon: discIcon}).addTo(map)
+			.bindPopup("<b>Sunae Park</b><br>37.367488, 127.1300370")//.openPopup();
+    L.marker([37.5737, 126.87668], {icon: discIcon}).addTo(map)
+			.bindPopup("<b>Noeul Park</b><br>37.57373249500214, 126.87668")//.openPopup();
+    L.marker([35.1101528, 128.87738590], {icon: discIcon}).addTo(map)
+			.bindPopup("<b>HwaAm Park (temp course)</b><br>35.1101528, 128.87738590")//.openPopup();
     </script>
       
    
